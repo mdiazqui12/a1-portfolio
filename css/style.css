@@ -373,3 +373,90 @@ h1, h2, h3 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+
+/* ==========================================================
+   Contact page
+   ========================================================== */
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.contact-form-wrap h2,
+.contact-aside h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.contact-form p {
+  margin: 0 0 1.1rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.7rem 0.85rem;
+  font: inherit;
+  color: var(--text);
+  background: #ffffff;
+  border: 2px solid #b8c4d2;
+  border-radius: 8px;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: var(--navy);
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+}
+
+.contact-aside {
+  background: var(--bg-alt);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  border-top: 4px solid var(--gold);
+  align-self: start;
+}
+
+.contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-list li {
+  margin-bottom: 0.9rem;
+  overflow-wrap: anywhere;
+}
+
+.contact-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Tablet and up ---------- */
+@media (min-width: 700px) {
+  .contact-layout {
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+  }
+}
