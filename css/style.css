@@ -460,3 +460,109 @@ h1, h2, h3 {
     gap: 3rem;
   }
 }
+
+
+/* ==========================================================
+   About page
+   ========================================================== */
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.about-main h2,
+.facts h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+/* ---------- Timeline ---------- */
+.timeline {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0 0 0 1.5rem;
+  border-left: 3px solid var(--gold);
+}
+
+.timeline li {
+  position: relative;
+  margin-bottom: 1.75rem;
+}
+
+.timeline li:last-child {
+  margin-bottom: 0;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: calc(-1.5rem - 9px);
+  top: 0.35rem;
+  width: 15px;
+  height: 15px;
+  background: var(--navy);
+  border: 3px solid var(--gold);
+  border-radius: 50%;
+}
+
+.timeline h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.15rem;
+}
+
+.timeline p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* ---------- Quick facts ---------- */
+.facts {
+  background: var(--bg-alt);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  border-top: 4px solid var(--gold);
+  align-self: start;
+}
+
+.facts-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.facts-list li {
+  margin-bottom: 0.8rem;
+}
+
+.facts-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Interest tags ---------- */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  list-style: none;
+  margin: 1rem 0 1.75rem;
+  padding: 0;
+}
+
+.tag-list li {
+  background: #ffffff;
+  color: var(--navy);
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  border: 2px solid var(--navy);
+  border-radius: 999px;
+}
+
+/* ---------- Tablet and up ---------- */
+@media (min-width: 700px) {
+  .about-layout {
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+  }
+}
